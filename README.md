@@ -21,11 +21,15 @@ docs/      how it works, step-by-step guide, style guide, glossary
 
 | file | what it is |
 |---|---|
-| `data/dialog_lithuanian.xlsx` | **every string of the game in Excel**: id, table, English, Lithuanian |
-| `data/dialog_lithuanian.tsv` | the same as plain text (tab separated) |
-| `data/lt_tm.json` | the finished Lithuanian translation, the drop-in file |
+| `data/tlou_part1_text_english.xlsx` | **every text of the game in Excel** — dialogue, subtitles, barks, menus, item names, notes, letters and journals; translation column empty |
+| `data/tlou_part1_text_english.tsv` | the same as plain text |
+| `data/dialog_lithuanian.xlsx` | the same 63 509 strings with the Lithuanian translation filled in |
+| `data/dialog_lithuanian.tsv` | the same as plain text |
+| `data/lt_tm.json` | the Lithuanian translation as the tools read it (61 340 strings) |
 | `data/labels_lt.json` | 146 short menu labels |
 | `data/lt_skip.json` | strings that are never translated (credits, icons) |
+
+`data/README.md` explains what each table holds and how the columns work.
 
 63 509 strings: 16 962 menu and item text, 13 672 story subtitles, 32 875 barks
 (enemy and companion chatter).
@@ -63,7 +67,9 @@ python tools\build_slot.py --archive "E:\tlou\core_pristine.psarc" --tm data\my_
 python tools\inject.py --archive "E:\tlou\core_pristine.psarc" --out "E:\tlou\core_translated.psarc" --build-dir out
 ```
 
-Then install the result: see [docs/INSTALL.md](docs/INSTALL.md).
+A longer walkthrough, with advice on the order of work and on tone, names and swearing:
+**[docs/TRANSLATING.md](docs/TRANSLATING.md)**. Installing the result:
+**[docs/INSTALL.md](docs/INSTALL.md)**.
 
 You do not have to translate in one go: untranslated strings fall back to English, so the
 game is readable at any stage and you can install after every session.

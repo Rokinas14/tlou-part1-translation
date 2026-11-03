@@ -4,11 +4,9 @@
 out/
 out_test/
 __pycache__/
+**/__pycache__/
 .pytest_cache/
-
-# the dialogue export is generated from your own copy of the game
-data/dialog_english.tsv
-data/dialog_english.xlsx
 
 # your own working files
 data/my_*.json
+data/core_*.md5

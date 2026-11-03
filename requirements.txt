@@ -1,0 +1,3 @@
+# Only needed for the Excel export and import (export_dialog.py --xlsx).
+# The TSV path works with the standard library alone.
+openpyxl>=3.1

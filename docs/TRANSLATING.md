@@ -11,10 +11,10 @@ whole job.
 ## 1. Get the strings
 
 ```powershell
-python tools\export_dialog.py --archive "E:\tlou\core_pristine.psarc" --out data --xlsx --name dialog_english
+python tools\export_dialog.py --archive "E:\tlou\core_pristine.psarc" --out data --xlsx --name tlou_part1_text_english
 ```
 
-You get `data\dialog_english.xlsx` with four columns:
+You get `data\tlou_part1_text_english.xlsx` with four columns:
 
 | id | table | english | translation |
 |---|---|---|---|
@@ -59,7 +59,7 @@ example): how names are spelled and declined, whether characters address each ot
 ## 3. Read the file back
 
 ```powershell
-python tools\import_dialog.py --file data\dialog_english.xlsx --tm data\my_tm.json
+python tools\import_dialog.py --file data\tlou_part1_text_english.xlsx --tm data\my_tm.json
 ```
 
 The command prints how many lines it took, how many were unchanged and which lines it

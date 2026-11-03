@@ -56,10 +56,10 @@ copy "D:\SteamLibrary\steamapps\common\The Last of Us Part I\build\pc\main\core.
 # 2. write every string of the game into one file, with your translation column
 python tools\export_dialog.py --archive "E:\tlou\core_pristine.psarc" --out data --xlsx
 
-# 3. translate the last column of data\dialog_english.xlsx, save it
+# 3. translate the last column of data\tlou_part1_text_english.xlsx, save it
 
 # 4. read your file back into the translation memory
-python tools\import_dialog.py --file data\dialog_english.xlsx --tm data\my_tm.json
+python tools\import_dialog.py --file data\tlou_part1_text_english.xlsx --tm data\my_tm.json
 
 # 5. build the three tables for a language slot and put them into a copy of the archive
 python tools\build_slot.py --archive "E:\tlou\core_pristine.psarc" --tm data\my_tm.json `
